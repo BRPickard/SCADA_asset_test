@@ -1,0 +1,12 @@
+{
+  "plc": {"service_interval_days": 180, "maintenance_basis": "time-based"},
+  "ups": {"service_interval_days": 90, "maintenance_basis": "inspection+replacement"},
+  "radio": {"service_interval_days": 180, "maintenance_basis": "performance-check"},
+  "router": {"service_interval_days": 180, "maintenance_basis": "firmware+health"},
+  "network switch": {"service_interval_days": 180, "maintenance_basis": "firmware+inspection"},
+  "server": {"service_interval_days": 90, "maintenance_basis": "patching+hardware-check"},
+  "flow monitor": {"service_interval_days": 365, "maintenance_basis": "calibration"},
+  "pressure recorder": {"service_interval_days": 180, "maintenance_basis": "calibration"},
+  "chart recorder": {"service_interval_days": 180, "maintenance_basis": "inspection+calibration"},
+  "dac module": {"service_interval_days": 365, "maintenance_basis": "functional-test"}
+}
