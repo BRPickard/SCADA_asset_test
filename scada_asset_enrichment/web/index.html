@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCADA Asset Enrichment MVP</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0b1220;
+        --card: #121c31;
+        --text: #e6edf7;
+        --muted: #a5b4cf;
+        --accent: #3b82f6;
+        --ok: #22c55e;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f3f6fb;
+          --card: #ffffff;
+          --text: #1f2937;
+          --muted: #4b5563;
+        }
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 920px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      h1, h2 { margin-top: 0; }
+
+      p, li { color: var(--muted); }
+
+      code {
+        background: rgba(127, 127, 127, 0.2);
+        padding: 0.15rem 0.35rem;
+        border-radius: 6px;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        background: var(--accent);
+        color: white;
+        padding: 0.65rem 0.9rem;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+
+      .status {
+        display: inline-block;
+        background: rgba(34, 197, 94, 0.2);
+        color: var(--ok);
+        border: 1px solid rgba(34, 197, 94, 0.6);
+        border-radius: 999px;
+        padding: 0.2rem 0.65rem;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <span class="status">Local MVP Launcher</span>
+        <h1>SCADA Asset Enrichment MVP</h1>
+        <p>
+          This is a lightweight local HTML page so you can start and use the project quickly.
+          The primary app experience still runs in Streamlit.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>1) Install dependencies</h2>
+        <p>From <code>scada_asset_enrichment/</code>:</p>
+        <p><code>pip install -r requirements.txt</code></p>
+      </section>
+
+      <section class="card">
+        <h2>2) Launch Streamlit app</h2>
+        <p><code>streamlit run app.py</code></p>
+        <p>
+          Once running, open:
+          <a class="btn" href="http://localhost:8501" target="_blank" rel="noreferrer">
+            Open Streamlit (localhost:8501)
+          </a>
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>3) Key workflow</h2>
+        <ol>
+          <li>Upload your workbook in <strong>Upload Inventory</strong>.</li>
+          <li>Review normalized rows in <strong>Review Canonical Assets</strong>.</li>
+          <li>Upload manuals in <strong>Upload Datasheets / Manuals</strong>.</li>
+          <li>Run enrichment + schedule and export outputs.</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Optional: host this HTML page</h2>
+        <p>
+          Run <code>python run_local_web.py</code> then open
+          <code>http://localhost:8080</code>.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
