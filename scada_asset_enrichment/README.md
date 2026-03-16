@@ -71,6 +71,14 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+## Run simple local HTML page
+
+```bash
+python run_local_web.py
+```
+
+Then open `http://localhost:8080` (this page links you to the Streamlit app at `http://localhost:8501`).
+
 ## How to use
 
 1. Open **Upload Inventory** and upload the multi-sheet workbook.
